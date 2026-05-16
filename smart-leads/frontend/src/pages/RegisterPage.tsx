@@ -70,13 +70,11 @@ export default function RegisterPage() {
           'linear-gradient(135deg, #f8fafc 0%, #eef2ff 50%, #f5f3ff 100%)',
       }}
     >
-      {/* GRID */}
       <div className="absolute inset-0 opacity-[0.35] bg-[linear-gradient(to_right,rgba(99,102,241,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(99,102,241,0.08)_1px,transparent_1px)] bg-[size:42px_42px]" />
 
-      {/* MAIN WRAPPER */}
       <div className="relative z-10 grid w-full max-w-6xl min-h-[600px] overflow-hidden rounded-[32px] shadow-[0_20px_80px_rgba(15,23,42,0.08)] lg:grid-cols-2">
 
-        {/* LEFT HERO (same as login) */}
+      
         <div className="relative flex flex-col justify-between p-12 overflow-hidden bg-gradient-to-br from-indigo-500 via-violet-500 to-blue-500 text-white">
 
           <div className="absolute -top-20 -right-20 h-96 w-96 rounded-full bg-white/10 blur-3xl" />
@@ -121,12 +119,12 @@ export default function RegisterPage() {
           </div>
         </div>
 
-        {/* RIGHT FORM */}
+      
         <div className="relative flex items-center justify-center px-6 py-10 bg-white">
 
           <div className="w-full max-w-md">
 
-            {/* HEADER */}
+           
             <div className="mb-10">
               <div className="flex items-center gap-4">
                 <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-indigo-50 border border-indigo-100">
@@ -144,12 +142,10 @@ export default function RegisterPage() {
               </div>
             </div>
 
-            {/* FORM CARD */}
             <div className="rounded-2xl border border-gray-100 bg-white shadow-[0_10px_40px_rgba(0,0,0,0.06)] p-8">
 
               <form onSubmit={handleSubmit} className="space-y-6">
 
-                {/* NAME */}
                 <div>
                   <label className="text-sm text-gray-600">Full Name</label>
                   <input
@@ -173,7 +169,6 @@ export default function RegisterPage() {
                   )}
                 </div>
 
-                {/* EMAIL */}
                 <div>
                   <label className="text-sm text-gray-600">Email</label>
                   <input
@@ -197,7 +192,7 @@ export default function RegisterPage() {
                   )}
                 </div>
 
-                {/* PASSWORD */}
+                
                 <div>
                   <label className="text-sm text-gray-600">Password</label>
 
@@ -237,7 +232,7 @@ export default function RegisterPage() {
                   )}
                 </div>
 
-                {/* BUTTON */}
+               
                 <button
                   type="submit"
                   disabled={isLoading}
@@ -258,7 +253,7 @@ export default function RegisterPage() {
 
               </form>
 
-              {/* FOOTER */}
+            
               <p className="text-center text-sm text-gray-500 mt-6">
                 Already have an account?{' '}
                 <Link

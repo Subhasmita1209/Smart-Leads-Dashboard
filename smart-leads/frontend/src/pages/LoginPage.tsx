@@ -75,7 +75,7 @@ export default function LoginPage() {
 
 <div className="relative z-10 grid w-full max-w-6xl min-h-[600px] overflow-hidden rounded-[32px] shadow-[0_20px_80px_rgba(15,23,42,0.08)] lg:grid-cols-2">
 
-        {/* LEFT SIDE (NOW BLUE HERO LIKE BEFORE RIGHT) */}
+      
         <div className="relative flex flex-col justify-between p-12 overflow-hidden bg-gradient-to-br from-indigo-500 via-violet-500 to-blue-500 text-white">
 
           <div className="absolute -top-20 -right-20 h-96 w-96 rounded-full bg-white/10 blur-3xl" />
@@ -121,12 +121,11 @@ export default function LoginPage() {
           </div>
         </div>
 
-        {/* RIGHT SIDE (NOW LIGHT LIKE LOGIN CARD STYLE) */}
+       
         <div className="relative flex items-center justify-center px-6 py-10 bg-white">
 
           <div className="w-full max-w-md">
 
-            {/* HEADER */}
             <div className="mb-10">
               <div className="flex items-center gap-4">
                 <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-indigo-50 border border-indigo-100">
@@ -145,12 +144,11 @@ export default function LoginPage() {
               </div>
             </div>
 
-            {/* LOGIN CARD */}
             <div className="rounded-2xl border border-gray-100 bg-white shadow-[0_10px_40px_rgba(0,0,0,0.06)] p-8">
 
               <form onSubmit={handleSubmit} className="space-y-6">
 
-                {/* EMAIL */}
+            
                 <div>
                   <label className="text-sm text-gray-600">
                     Email
@@ -178,7 +176,6 @@ export default function LoginPage() {
                   )}
                 </div>
 
-                {/* PASSWORD */}
                 <div>
                   <label className="text-sm text-gray-600">
                     Password
@@ -220,7 +217,6 @@ export default function LoginPage() {
                   )}
                 </div>
 
-                {/* BUTTON */}
                 <button
                   type="submit"
                   disabled={isLoading}
@@ -241,7 +237,7 @@ export default function LoginPage() {
 
               </form>
 
-              {/* FOOTER */}
+            
               <p className="text-center text-sm text-gray-500 mt-6">
                 Don’t have an account?{' '}
                <Link
