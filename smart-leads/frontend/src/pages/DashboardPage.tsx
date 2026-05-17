@@ -138,7 +138,6 @@ export default function DashboardPage() {
           }
         }
 
-        /* ── Header ── */
         .dash-header {
           display: flex;
           justify-content: space-between;
@@ -195,7 +194,7 @@ export default function DashboardPage() {
           color: var(--text-primary);
         }
 
-        /* ── Stat cards grid ── */
+        
         .stat-grid {
           display: grid;
           grid-template-columns: repeat(4, 1fr);
@@ -209,7 +208,6 @@ export default function DashboardPage() {
           }
         }
 
-        /* ── Stat card ── */
         .stat-card {
           background: var(--card-bg);
           border: 1px solid var(--border);
