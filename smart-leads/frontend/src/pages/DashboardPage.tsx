@@ -13,28 +13,27 @@ import {
   XCircle,
 } from 'lucide-react';
 
-// ── Source icon map ───────────────────────────────────────────────────────────
 const sourceIcons = {
   Website: Globe,
   Instagram,
   Referral: Users,
 };
 
-// ── Bar accent colors per source ──────────────────────────────────────────────
+
 const sourceBarColors: Record<string, string> = {
   Website: '#1a56db',
   Instagram: '#ec4899',
   Referral: '#10b981',
 };
 
-// ── Source icon styles ────────────────────────────────────────────────────────
+
 const sourceIconStyles: Record<string, { bg: string; color: string }> = {
   Website: { bg: '#eff6ff', color: '#1d4ed8' },
   Instagram: { bg: '#fdf2f8', color: '#be185d' },
   Referral: { bg: '#f0fdf4', color: '#15803d' },
 };
 
-// ── Stat card config ──────────────────────────────────────────────────────────
+
 const statCardConfig = [
   {
     key: 'total',
@@ -62,7 +61,7 @@ const statCardConfig = [
   },
 ];
 
-// ── Avatar palette ────────────────────────────────────────────────────────────
+
 const avatarPalette = [
   { bg: '#f0f0ff', color: '#5145cd' },
   { bg: '#f0f0ff', color: '#5145cd' },
@@ -71,7 +70,7 @@ const avatarPalette = [
   { bg: '#fce4ec', color: '#c62828' },
 ];
 
-// ── Status mini-card colors ───────────────────────────────────────────────────
+
 const statusColorMap: Record<string, { bg: string; color: string }> = {
   new: { bg: '#e8eeff', color: '#1e40af' },
   contacted: { bg: '#fef9e7', color: '#92400e' },
@@ -89,7 +88,7 @@ function getInitials(name: string) {
     .slice(0, 2);
 }
 
-// ── Resolve stat value from stats object ──────────────────────────────────────
+
 function getStatValue(stats: any, key: string): number {
   if (!stats) return 0;
   if (key === 'total') return stats.total ?? 0;
@@ -265,7 +264,7 @@ export default function DashboardPage() {
           font-weight: 400;
         }
 
-        /* ── Main grid ── */
+    
    .dash-grid {
   display: grid;
   grid-template-columns: 1.4fr 1fr; /* Recent Leads bigger */
@@ -279,7 +278,6 @@ export default function DashboardPage() {
   }
 }
 
-        /* ── Card shell ── */
         .dash-card {
           border: 1px solid var(--border);
           border-radius: 16px;
@@ -332,7 +330,7 @@ export default function DashboardPage() {
           opacity: 0.75;
         }
 
-        /* ── Lead rows ── */
+       
         .lead-row {
           display: flex;
           align-items: center;
@@ -395,7 +393,6 @@ export default function DashboardPage() {
           gap: 6px;
         }
 
-        /* ── Empty state ── */
         .empty-msg {
           padding: 40px 20px;
           text-align: center;
@@ -403,7 +400,6 @@ export default function DashboardPage() {
           color: var(--text-secondary);
         }
 
-        /* ── Source rows ── */
         .source-row-wrap {
           padding: 15px 20px;
         }
@@ -461,7 +457,6 @@ export default function DashboardPage() {
           transition: width 0.7s cubic-bezier(.22,1,.36,1);
         }
 
-        /* ── Status breakdown ── */
         .status-section-head {
           font-size: 13px;
           font-weight: 500;
@@ -499,11 +494,13 @@ export default function DashboardPage() {
           font-size: 12px;
           opacity: 0.8;
         }
+          
+          
       `}</style>
 
       <div className="dash-page">
 
-        {/* ── Header ──────────────────────────────────────────────────────── */}
+      
         <div className="dash-header">
           <div>
             <h1 className="dash-title">
@@ -528,7 +525,7 @@ export default function DashboardPage() {
           )}
         </div>
 
-        {/* ── Stat Cards ─────────────────────────────────────────────────── */}
+   
         <div className="stat-grid">
           {statCardConfig.map(({ key, label, icon: Icon, iconBg }) => (
             <div className="stat-card" key={key}>
@@ -556,10 +553,8 @@ export default function DashboardPage() {
           ))}
         </div>
 
-        {/* ── Main grid ─────────────────────────────────────────────────── */}
         <div className="dash-grid">
 
-          {/* Recent Leads */}
           <div className="dash-card">
             <div className="dash-card-head">
               <h2 className="dash-card-title">
@@ -619,7 +614,7 @@ export default function DashboardPage() {
             </div>
           </div>
 
-          {/* Leads by Source */}
+     
           <div className="dash-card">
             <div className="dash-card-head">
               <h2 className="dash-card-title">
