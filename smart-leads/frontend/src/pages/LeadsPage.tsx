@@ -56,7 +56,7 @@ export default function LeadsPage() {
       search: debouncedSearch,
     });
 
-    // Fetch with auth token
+    
     fetch(url, { headers: { Authorization: `Bearer ${token}` } })
       .then((res) => res.blob())
       .then((blob) => {
@@ -100,7 +100,7 @@ export default function LeadsPage() {
         onClear={handleClear}
       />
 
-      {/* Table */}
+     
       <LeadsTable
         leads={leads}
         meta={meta}
@@ -110,7 +110,6 @@ export default function LeadsPage() {
         onPageChange={(page) => setFilters((prev) => ({ ...prev, page }))}
       />
 
-      {/* Modals */}
       {showForm && (
         <LeadFormModal
           lead={editingLead}
